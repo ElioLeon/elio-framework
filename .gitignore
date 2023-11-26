@@ -37,3 +37,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/application-20231126.log
+/logs/xmlfilelog.log

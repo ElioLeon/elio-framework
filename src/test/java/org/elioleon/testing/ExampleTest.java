@@ -1,5 +1,6 @@
 package org.elioleon.testing;
 
+import org.elioleon.logs.LogsManager;
 import org.elioleon.pages.ExamplePage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -20,9 +21,19 @@ class ExampleTest {
         example.closeConnection();
     }
 
-    @Test
-    void eightComponents() {
+    public void checkTitle(){
+        LogsManager.info("Step 1: Verify title");
         String title = example.getTitle();
         Assertions.assertEquals("Google", title);
+    }
+
+
+
+
+
+
+    @Test
+    void testExecution() {
+        checkTitle();
     }
 }
