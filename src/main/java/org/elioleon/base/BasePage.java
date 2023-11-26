@@ -20,7 +20,7 @@ public abstract class BasePage {
     }
 
     protected static void quitDriver(){
-        driver.close();
+        driver.quit();
         logger.info("Close driver");
     }
 }
