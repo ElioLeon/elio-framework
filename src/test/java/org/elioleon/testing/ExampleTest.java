@@ -25,7 +25,13 @@ class ExampleTest {
         LogsManager.info("Step 1: Verify title");
         String title = example.getTitle();
         Assertions.assertEquals("Google", title);
-        example.takeScreenShot();
+        example.takeScreenShot("Title");
+    }
+
+    public void acceptCookies() {
+        LogsManager.info("Step 2: Press accept all");
+        example.aceptarAviso();
+        example.takeScreenShot("Accept");
     }
 
 
@@ -36,5 +42,6 @@ class ExampleTest {
     @Test
     void testExecution() {
         checkTitle();
+        acceptCookies();
     }
 }

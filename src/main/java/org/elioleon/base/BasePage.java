@@ -26,10 +26,10 @@ public abstract class BasePage {
         LogsManager.info("Close driver");
     }
 
-    protected  void screenShot() {
+    protected  void screenShot(String name) {
         try{
             File source = ((ChromeDriver)driver).getScreenshotAs(OutputType.FILE);
-            FileHandler.copy(source, new File("QED_Full_Page_Screenshot.png"));
+            FileHandler.copy(source, new File(name + ".png"));
         }catch (IOException ex){
             LogsManager.error(ex.getMessage());
         }
