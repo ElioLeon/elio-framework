@@ -9,6 +9,7 @@ public class ExamplePage extends BasePage {
 
     public void connection(String url){
         driver.navigate().to(url);
+        logger.info("Navigate to " + url);
     }
 
     public void closeConnection(){
