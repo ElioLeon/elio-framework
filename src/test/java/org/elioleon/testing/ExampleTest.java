@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 
 class ExampleTest {
     protected static ExamplePage example = new ExamplePage();
@@ -21,10 +23,11 @@ class ExampleTest {
         example.closeConnection();
     }
 
-    public void checkTitle(){
+    public void checkTitle() {
         LogsManager.info("Step 1: Verify title");
         String title = example.getTitle();
         Assertions.assertEquals("Google", title);
+        example.takeScreenShot();
     }
 
 

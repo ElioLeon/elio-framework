@@ -3,6 +3,7 @@ package org.elioleon.pages;
 import org.elioleon.base.BasePage;
 import org.elioleon.logs.LogsManager;
 
+
 public class ExamplePage extends BasePage {
     public ExamplePage() {
         super();
@@ -15,6 +16,10 @@ public class ExamplePage extends BasePage {
 
     public void closeConnection(){
         quitDriver();
+    }
+
+    public void takeScreenShot() {
+        screenShot();
     }
 
     public String getTitle(){
